@@ -54,6 +54,7 @@
 }
 
 - (void)drawInMTKView:(MTKView *)view {
+    //要改的话，可以在这里设置texture的输入和输出，换成自己的shader之类的bala。
     self.saturationFilter.inputImage = self.inputImage;
     self.saturationFilter.saturation = 1.0 + sin(CFAbsoluteTimeGetCurrent() * 2.0);
     self.colorInvertFilter.inputImage = self.saturationFilter.outputImage;

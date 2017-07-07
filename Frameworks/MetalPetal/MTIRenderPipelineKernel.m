@@ -97,6 +97,7 @@
     }
     
     //encode parameters
+    //TODO其他类型参数的支持，这里用的是setBytes的方式，还可以换成setBuffer的方式。
     if (self.fragmentFunctionParameters.count > 0) {
         for (NSInteger index = 0; index < renderPipeline.reflection.fragmentArguments.count; index += 1) {
             MTLArgument *argument = renderPipeline.reflection.fragmentArguments[index];

@@ -41,6 +41,7 @@ fragment float4 colorInvert(
     return float4(color, 1.0);
 }
 
+//根据name可以找得到，然后attribute qualifier来传递东西，vertex和纹理，和sampler都是根据index来传递，因为假设纹理的顺序可能不太会变化。但是参数是根据名字来传递的。
 fragment float4 saturationAdjust(
     VertexOut vertexIn [[ stage_in ]],
     texture2d<float, access::sample> colorTexture [[ texture(0) ]],
